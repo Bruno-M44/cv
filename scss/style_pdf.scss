@@ -1,0 +1,60 @@
+@import "variables_overrides_pdf.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+u
+{
+	text-decoration: underline;
+  	text-decoration-color: $primary;
+}
+
+
+ul.list-circle {
+    list-style-type: circle;
+  }
+
+.text-justify {
+    text-align: justify;
+  }
+
+.fa-13x {
+    font-size: 1.3em;
+   }
+
+.ms-005 {
+    margin-left: 0.05em;
+}
+
+.box-shadow{
+	max-width: 100%;
+	padding: 10px 15px;
+	margin: 0px 8px 20px 8px;
+	color: #000;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);	
+}
+
+
+/* MD breakpoint*/
+@media (min-width: 768px) {
+    .w-md-50 { width: 50%!important; }
+    .pe-md-15 { padding-right: 15rem!important;}
+}
+
+body {
+    background: rgb(204,204,204); 
+  }
+  page[size="A4"] {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  @media print {
+    body, page[size="A4"] {
+      margin: 0;
+      box-shadow: 0;
+    }
+  }
+  

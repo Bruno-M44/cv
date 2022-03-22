@@ -1,0 +1,27 @@
+@import "variables_overrides.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+u
+{
+	text-decoration: underline;
+  	text-decoration-color: $primary;
+}
+
+ul.list-circle {
+    list-style-type: circle;
+  }
+
+.text-justify {
+    text-align: justify;
+  }
+
+.fa-13x {
+    font-size: 1.3em;
+   }
+
+
+/* MD breakpoint*/
+@media (min-width: 768px) {
+    .w-md-50 { width: 50%!important; }
+    .pe-md-15 { padding-right: 15rem!important;}
+}
