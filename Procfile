@@ -1,1 +1,1 @@
-web: gunicorn wsgi:cv_app
+web: gunicorn wsgi:app

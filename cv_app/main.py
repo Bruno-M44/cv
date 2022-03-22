@@ -1,13 +1,21 @@
-from flask import Flask, render_template
-
+from flask import Flask
+ 
 app = Flask(__name__)
-app.secret_key = 'something_special'
-#Scss(app, static_dir='static', asset_dir='assets')
+ 
+@app.route("/")
+def home_view():
+        return "<h1>Welcome to Geeks for Geeks</h1>"
 
-@app.route('/')
-def index():
-    return render_template('cv.html')
+# from flask import Flask, render_template
 
-if __name__ == '__main__':
-    # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+# app = Flask(__name__)
+# app.secret_key = 'something_special'
+# #Scss(app, static_dir='static', asset_dir='assets')
+
+# @app.route('/')
+# def index():
+#     return render_template('cv.html')
+
+# if __name__ == '__main__':
+#     # Threaded option to enable multiple instances for multiple user access support
+#     app.run(threaded=True, port=5000)
