@@ -2,11 +2,11 @@ from flask import Flask, render_template
 import sys
 import logging
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 #app.secret_key = 'something_special'
 #Scss(app, static_dir='static', asset_dir='assets')
 
-app.config['EXPLAIN_TEMPLATE_LOADING'] = True
+
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
