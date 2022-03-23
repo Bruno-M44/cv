@@ -7,9 +7,6 @@
     <title>CV Bruno M</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!--
-    <link rel="stylesheet" href="../templates/static/css/style.css">
-    -->
     <!-- Bootstrap icons-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<!-- Font Awesome -->
@@ -18,7 +15,7 @@
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 </head>
 <body>
-	<header class="py-4 d-print-none">
+	<header class="py-4">
 		<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
 			<div class="container">
 				<a class="navbar-brand text-uppercase fw-bold" href="#">
@@ -31,19 +28,19 @@
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							<a class="nav-link" href="#brunom">Qui suis-je ?</a>
+							<a id="nav-brunom" class="nav-link" href="#brunom">Qui suis-je ?</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" href="#expertise">Expertise</a>
+							<a id="nav-expertise" class="nav-link" href="#expertise">Expertise</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#formations">Formations</a>
+							<a id="nav-formations" class="nav-link" href="#formations">Formations</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#experiences">Expériences</a>
+							<a id="nav-experiences" class="nav-link" href="#experiences">Expériences</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" href="#interets">Interets</a>
+							<a id="nav-interets" class="nav-link" href="#interets">Interets</a>
 						</li>
 					</ul>
 				</div>
@@ -51,20 +48,19 @@
 		</nav>
 	</header>
 
+    <button onclick="topFunction()" id="btnBack" class="fw-bold" type="button">^</button>
+
 	<main>
 
-		<section id="brunom" class="py-5 d-print-table">
+		<section id="brunom" class="py-5">
 			<div class="container">
-				<div class="row gy-4 gy-md-0">
-                    <div class="col-12 col-md-3">
+				<div class="row gy-4 gy-lg-0">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <img src="{{ url_for('static', filename='img/profil.JPG') }}" 
                         alt="Bruno M" class="w-100">
                     </div>
-
-
-
-					<div class="col-12 col-md-6 pe-md-15">
-                        <h2 class="d-none d-print-block mb-2">Bruno M</h2>
+					<div class="col-12 col-md-8 col-lg-6 pe-lg-15">
+                        <h2 class="mb-2">Bruno M</h2>
 						<h3 class="mb-3">Développeur Python (Back-end, analyse de données)</h3>
 						<p class="text-justify">Riche d’une expérience de 10 ans dans le domaine de l'informatique 
                             de gestion, je viens de finir une formation de Développeur d'application Python et souhaite
@@ -100,6 +96,11 @@
                         </div>
                         <div class="d-flex">
                             <i class="iconify fa-13x fab me-3 text-primary" 
+                                                data-icon="cib:heroku"></i>
+                            <p><a href="https://cv-bruno-m.herokuapp.com/">cv-bruno-m.herokuapp.com/</a></p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="iconify fa-13x fab me-3 text-primary" 
                                                 data-icon="akar-icons:github-fill"></i>
                             <p><a href="https://github.com/Bruno-M44/">github.com/Bruno-M44/</a></p>
                         </div>
@@ -115,7 +116,7 @@
 			</div>
 		</section>
 
-        <section id="expertise" class="pb-5 bg-light d-print-flex">
+        <section id="expertise" class="pb-5 bg-light">
             <div class="container">
                 <h2 class="mb-0">Mon expertise</h2>
                 <p class="text-secondary">20% : notions, 40% : intermédiaire , 60% : bon niveau, 80% : avancé,
